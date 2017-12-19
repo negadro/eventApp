@@ -1,0 +1,6 @@
+<ion-item class="event-item" *ngIf="hasEvents">
+    <ion-row>
+     <ion-badge class="event-group-title-badge" item-start>{{listName}}</ion-badge>
+    </ion-row>
+     <event *ngFor="let cEvent of events"  [event]="cEvent" (click)="onClick($event)"></event>
+   </ion-item>

@@ -1,14 +1,27 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Events
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content>
+    <ion-searchbar (ionInput)="searchEvents($event)" [placeholder]="'Search Events'"></ion-searchbar>
+
+    <event-list [events]="getTodaysEvents(filteredEvents)" (click)="navigateToEventDetail($event)" [listName]="'Today'"></event-list>
+    <event-list [events]="getThisWeeksEvents(filteredEvents)" (click)="navigateToEventDetail($event)" [listName]="'This Week'"></event-list>
+    <event-list [events]="getOtherEvents(filteredEvents)" (click)="navigateToEventDetail($event)" [listName]="'Next Events'"></event-list>
+   <ion-card *ngIf="noEventFound">
+     <ion-card-content>
+    <p>No Events Found</p>
+  </ion-card-content>
+  </ion-card>
+  <ion-card *ngIf="hasError">
+      <ion-card-content>
+     <p>{{errorText}}</p>
+   </ion-card-content>
+   </ion-card>
+
+  
 </ion-content>

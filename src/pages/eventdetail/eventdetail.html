@@ -1,0 +1,105 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Event Detail
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+<ion-card>
+
+  <img src="{{event.Image}}" class="event-card-header-img"/>
+
+  <ion-card-content>
+    <ion-card-title class="event-card-title">
+      {{event.Title}}
+    </ion-card-title>
+    <ion-note>
+        Public event - {{event.Description}}
+      </ion-note>
+    <ion-item>
+    <p><ion-icon name="ios-clock-outline"></ion-icon>  {{getEventDatePresentation(event.DateTime)}}</p>
+    <p> <ion-icon name="ios-navigate-outline"></ion-icon>   The Pool - The Student Hotel Amsterdam City</p>
+    <p><ion-icon name="ios-compass-outline"></ion-icon>   {{event.Members.length}} going</p>
+    <avatar-list margin-top margin-bottom [members]="event.Members" [size]="'medium'" [enableRemainingAvatar]="true" [maxCount]="6"></avatar-list>
+
+      <p>
+      In 1.5 hour we will explore Amsterdam on our bicycles, we'll show beautiful canals,hidden gems, and abso...
+    </p>
+  </ion-item>
+    </ion-card-content>
+
+</ion-card>
+<ion-card>
+  <ion-card-content>
+    <ion-input [placeholder]="'Leave a message...'"></ion-input>
+  </ion-card-content>
+</ion-card>
+<ion-card>
+
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="{{event.Image}}">
+      </ion-thumbnail>
+      <h2><span class="bold">Lucien  van Geffen</span> shared a link</h2>
+      <p> <ion-icon name='ios-clock-outline'></ion-icon> 14 min ago </p>
+    </ion-item>
+    <ion-card-content>
+        <h2>How to ride like a Dutchie!</h2>
+    <img src="{{event.Image}}">
+     
+    <ion-card-title>
+        THE BIKE INSTRUCTOR'S GUIDE TO CYCLING ...
+      </ion-card-title>
+      <p>  Thankfully, Maxim Hartman aka The Bike Instructor is ...</p>
+      <ion-note>
+        youtube.com
+        </ion-note>
+    <p style="margin-top:20px;"> <ion-icon name='ios-clock-outline'></ion-icon>14</p>
+    </ion-card-content>
+    <ion-row>
+      <ion-col>
+        <button ion-button color="primary" clear small icon-start>
+          <ion-icon name='ios-hand-outline'></ion-icon>
+          High five
+        </button>
+      </ion-col>
+      <ion-col>
+        <button ion-button color="primary" clear small icon-start>
+          <ion-icon name='ios-text-outline'></ion-icon>
+          Comment
+        </button>
+      </ion-col>
+    </ion-row>
+  
+  </ion-card>
+
+  <ion-card>
+      <ion-item>
+          <ion-thumbnail item-start>
+            <img src="{{event.Image}}">
+          </ion-thumbnail>
+          <h2>Bruno Dagestino</h2>
+          <p> <ion-icon name='ios-clock-outline'></ion-icon> 23 min ago </p>
+        </ion-item>
+      <ion-card-content>
+        Is it possible to leave after an hour? I would love to join, but I have another appointment later that evening...
+      </ion-card-content>
+      <ion-row>
+          <ion-col>
+            <button ion-button color="primary" clear small icon-start>
+              <ion-icon name='ios-hand-outline'></ion-icon>
+              High five
+            </button>
+          </ion-col>
+          <ion-col>
+            <button ion-button color="primary" clear small icon-start>
+              <ion-icon name='ios-text-outline'></ion-icon>
+              Comment
+            </button>
+          </ion-col>
+        </ion-row>
+    </ion-card>
+</ion-content>
+

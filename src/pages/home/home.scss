@@ -1,3 +1,117 @@
 page-home {
 
 }
+
+.event-item
+{
+    padding: 0px;
+    margin: 0px;
+    margin-top: 3rem;
+    contain: initial;
+    overflow: visible;
+}
+
+.event-item .item-inner
+{
+    border:none;
+    border-bottom: none !important;
+    padding: 0px !important;
+}
+
+.event-item .item-inner ion-label
+{
+    margin: 0px !important;
+}
+
+.event-item ion-card
+{
+    border: none;
+    box-shadow: none;
+}
+
+.event-group-title-badge
+{
+    background-color: #FFD018;
+    border-radius: 0px;
+    padding: 10px;
+    color:black;
+    font-style: italic;
+    font-size: 20px;
+    position: absolute;
+    top: -28px;
+}
+
+.event-title{
+    font-family: "Fjalla One";
+    font-weight: 400;
+    font-style: normal;
+    color: black !important;
+    font-size: 2.2rem !important;
+}
+
+.event-date
+{
+    font-size: 1.8rem !important;
+    color:black !important;
+}
+
+.event-thumbnail
+{
+    width: 13rem;
+    height: 13rem;
+}
+
+.avatar-list-container
+{
+    display: inherit;
+}
+
+.avatar-list-container ion-avatar
+{
+    
+}
+
+.event-attendence-status-check
+{
+    background-color: #FFD018;
+    width: 100px;
+    height: 30px;
+    padding-left: 10px;
+}
+
+.event-attendence-status-check.not-selected
+{
+    background-color: #C8C7CD;
+    width: 100px;
+    height: 30px;
+    padding-left: 10px;
+}
+
+
+
+.event-attendence-status-check .checkbox-icon
+{
+   
+    border:none;
+    background-color: inherit;
+    color:black;
+}
+
+.event-attendence-status-check .checkbox
+{
+   
+    margin: 8px 0px 8px 2px !important;
+}
+
+.event-attendence-status-check .checkbox-icon .checkbox-inner
+{
+   
+   border-color: inherit;
+}
+
+img{
+    width:100%;
+    height:100%;
+  }
+  
+  

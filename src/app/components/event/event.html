@@ -1,0 +1,42 @@
+<ion-card  (click)="selectEvent(event)">
+        <ion-row>
+              <ion-col col-5>
+                <ion-card class="eventCard">
+                  <img class="event-thumbnail" src="{{event.Image}}">
+                  <div class="eventCard-overlay">
+                    <div class=inner-content>
+                      <p class="card-title">{{getEventDay(event.DateTime)}}</p>
+                      <p class="card-subtitle">{{getEventMonth(event.DateTime)}}</p>
+                    </div>
+                   </div>
+                </ion-card>
+              </ion-col>
+              <ion-col col-7>
+                <ion-row>
+                    <p class="event-title">{{ event.Title}}</p>
+                    <p class="event-date">
+                        {{getStringPresentationOfDay(event.DateTime)}}
+                    </p>
+                </ion-row>
+                <ion-row>
+                 <avatar-list [members]="event.Members" [size]="'small'"></avatar-list>
+                
+                </ion-row>
+                <ion-row>
+                  <ion-col col-6>
+                    <ion-item *ngIf="showGoing" class="event-attendence-status-check" [ngClass]="{'not-selected':statusNotSelected}" >      
+                        <ion-checkbox  (ionChange)="going()" [(ngModel)]="goingChecked"></ion-checkbox>
+                        <ion-label>Going</ion-label>
+                      </ion-item>
+                    </ion-col>
+                    <ion-col col-6>
+                      <ion-item  *ngIf="showIgnore" class="event-attendence-status-check not-selected" >
+                          <ion-checkbox (ionChange)="ignore()" [(ngModel)]="ignoreChecked"></ion-checkbox>
+                          <ion-label>Ignore</ion-label>
+                        </ion-item>
+                      </ion-col>
+                </ion-row>
+             
+              </ion-col>
+            </ion-row>
+          </ion-card>

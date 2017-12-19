@@ -1,0 +1,46 @@
+page-event-detail {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+page-event-detail ion-card {
+    margin: 0px !important; 
+    margin-bottom:12px !important;
+    width: inherit !important;
+
+    .event-card-header-img
+{
+    width:100%;
+}
+
+ .event-card-title {
+        font-size:3rem !important;
+        font-weight: bold;
+        margin: 0px !important;
+        padding: 0px !important;
+    }
+
+    .event-description {
+        font-size: 1.8rem;
+    }
+
+    p {
+        margin: 10px 20px 10px 20px;
+        color:black !important;
+        ion-icon{
+            margin-right: 5px;
+            background-color: white;
+        }
+    }
+
+    avatar-list {
+        margin-left:  4rem;
+    }
+}
+
+.bold
+{
+    font-weight: bold;
+}
+
+
+

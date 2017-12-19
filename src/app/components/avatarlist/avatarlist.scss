@@ -1,0 +1,63 @@
+avatar-list
+{
+    display: flex;
+    margin-left: 15px;
+}
+
+.avatar-list-container
+{
+    margin: 5 0px 5 0px;
+}
+
+.avatar-list-container ion-avatar
+{
+    position: relative;
+    margin-left: -15px;
+    border: 3px solid white;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.avatar-list-container ion-avatar img
+{
+   border-radius: 50%;
+}
+
+.avatar-list-container.small ion-avatar img
+{
+    width: 36px;
+    height: 36px;
+}
+
+.avatar-list-container.medium ion-avatar img
+{
+    width: 54px;
+    height: 54px;
+}
+
+.avatar-list-container ion-avatar ion-text-avatar
+{
+    background-color:  #FFD018 !important;
+    color: black !important;
+    border-radius: 50%;
+}
+
+.avatar-list-container.small ion-avatar ion-text-avatar
+{
+    width: 36px;
+    height: 36px;
+}
+
+.avatar-list-container.medium ion-avatar ion-text-avatar
+{
+    width: 54px;
+    height: 54px;
+}
+
+.avatar-list-container .avatar-remainings
+{
+    display: flex;
+    align-items:center ;
+    font-size: 1.8rem;
+    color: black;
+}

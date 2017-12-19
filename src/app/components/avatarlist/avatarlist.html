@@ -1,0 +1,11 @@
+<div class="avatar-list-container" [ngClass]="size" >
+        <ion-avatar *ngFor="let member of filteredMembers">
+            <img src="{{member.Photo}}">
+        </ion-avatar>
+        <p class="avatar-remainings" *ngIf="showRemainingsAsText">
+        + {{remaingCount}} others
+    </p>
+    <ion-avatar *ngIf="showRemainingsAsAvatar">
+    <ion-text-avatar>+{{remaingCount}}</ion-text-avatar>
+    </ion-avatar>
+</div>
